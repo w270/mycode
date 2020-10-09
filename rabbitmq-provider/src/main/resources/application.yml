@@ -1,0 +1,17 @@
+server:
+  port: 8021
+spring:
+  #给项目来个名字
+  application:
+    name: rabbitmq-provider
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 192.168.2.201
+    port: 5672
+    username: root
+    password: root123
+    #确认消息已发送到交换机(Exchange)
+    #publisher-confirms: true 过时
+    publisher-confirm-type: correlated
+    #确认消息已发送到队列(Queue)，抵达队列，异步发送优先发送回调
+    publisher-returns: true
