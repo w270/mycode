@@ -1,0 +1,9 @@
+package com.zbinyun.DesignPattern.CreationalPattern.SingletonPattern;
+
+public class HungrySingleton {
+    private static HungrySingleton instance = new HungrySingleton();
+    private HungrySingleton(){}
+    public static HungrySingleton getInstance() {
+        return instance;
+    }
+}
