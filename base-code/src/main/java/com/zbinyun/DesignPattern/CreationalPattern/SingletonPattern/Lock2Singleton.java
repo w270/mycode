@@ -1,5 +1,8 @@
 package com.zbinyun.DesignPattern.CreationalPattern.SingletonPattern;
 
+/**
+ * 单例，双重检验锁（双端检锁）
+ */
 public class Lock2Singleton {
     private volatile static Lock2Singleton instance ;
     private Lock2Singleton(){}

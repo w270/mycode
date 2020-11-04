@@ -6,6 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class StringTest {
     public static void main(String[] args) {
+        Integer i = 1;
         "".concat("");
         Map<String,String> map = new ConcurrentHashMap<>();
         String str1 = new String("111");

@@ -1,5 +1,8 @@
 package com.zbinyun.DesignPattern.CreationalPattern.SingletonPattern;
 
+/**
+ * 单例，懒汉式（线程安全）
+ */
 public class LazySingleton {
     private static LazySingleton instance ;
     private LazySingleton(){}

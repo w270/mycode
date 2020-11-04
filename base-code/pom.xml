@@ -51,5 +51,51 @@
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.74</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.baidu</groupId>
+      <artifactId>jprotobuf</artifactId>
+      <version>2.2.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.baidu</groupId>
+      <artifactId>jprotobuf-precompile-plugin</artifactId>
+      <version>2.0.8</version>
+    </dependency>
+
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.baidu</groupId>
+        <artifactId>jprotobuf-precompile-plugin</artifactId>
+        <version>2.0.8</version>
+        <configuration>
+          <!--<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>-->
+          <filterClassPackage>com.你的实体类所在包名</filterClassPackage>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>precompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
